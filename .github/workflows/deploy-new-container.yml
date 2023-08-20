@@ -15,6 +15,7 @@ jobs:
     - name: 'Run Azure webapp deploy action using publish profile credentials'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: agh-event-hub-backend-app
+        app-name: prod-agh-event-hub-api
+        resource-group-name: prod-rg
         publish-profile: ${{ secrets.azureWebAppPublishProfile }}
         images: "docker.io/enriquecatala/fastapi-helloworld:2022-02-09"
